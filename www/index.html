@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NodeJS Calculator</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>NodeJS Based Calculator</h1>
+  <p>Enter any mathematical operation into the inputbox:</p>
+  <input id="operation" value="" />
+  <button id="calculate">Calculate</button>
+  <p id="result">Result: </p>
+
+  
+  <script>
+    console.log("Script is being loaded sort of")
+    var calculate = document.getElementById('calculate');
+
+    calculate.onclick = function() {
+      var operation = document.getElementById("operation");
+      var result = document.getElementById('result');
+
+      result.innerHTML = "Result: " + eval(operation.value);
+    }
+  </script>
+</body>
+</html>
